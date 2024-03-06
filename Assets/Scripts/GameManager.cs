@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,5 +43,10 @@ public class GameManager : MonoBehaviour
     }
     public string PrettyScore () {
         return Mathf.RoundToInt(currentScore).ToString();
+    }
+
+    public void returnToVillage()
+    {
+        SceneManager.LoadScene("Village");
     }
 }
