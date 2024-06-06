@@ -19,6 +19,8 @@ public class Spawner : MonoBehaviour
         if (GameManager.Instance.isPlaying) {
             SpawnLoop();
         }
+        // TODO: variables are reset when game is replayed
+        // obstacleSpeed += 0.0001f;
     }
 
     private void SpawnLoop() {
