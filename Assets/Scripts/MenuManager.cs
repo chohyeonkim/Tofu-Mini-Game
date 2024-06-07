@@ -10,7 +10,6 @@ public class MenuManager : MonoBehaviour
     public void onGameButtonClick(string name)
     {
         selectedGameName = name;
-        // TODO: move Tofu
     }
 
     public void onPlayButtonClick()

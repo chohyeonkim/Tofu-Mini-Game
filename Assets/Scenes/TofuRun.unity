@@ -373,7 +373,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d381b80b5f53f4c8aa8c6a1af609974a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 172ba044e677648d58a44a9a30157e5d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ec10a977510424ea02a9349cdf3bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hspeed: 0.15
+  hspeed: 0.25
   vspeed: 0
   re: {fileID: 0}
 --- !u!1 &747209664
@@ -1214,6 +1214,7 @@ MonoBehaviour:
   obstacleParent: {fileID: 955780296}
   obstacleSpawnTime: 3
   obstacleSpeed: 6
+  maxObstacleSpeed: 30
 --- !u!4 &1095319017
 Transform:
   m_ObjectHideFlags: 0

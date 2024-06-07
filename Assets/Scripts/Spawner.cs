@@ -6,8 +6,10 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstaclePrefabs;
     [SerializeField] private Transform obstacleParent;
-    public float obstacleSpawnTime = 2f;
-    public float obstacleSpeed = 1f;
+    public float obstacleSpawnTime = 3f;
+    public float obstacleSpeed = 6f;
+
+    public float maxObstacleSpeed = 30f;
 
     private float timeUntilObstacleSpawn;
 
@@ -19,8 +21,6 @@ public class Spawner : MonoBehaviour
         if (GameManager.Instance.isPlaying) {
             SpawnLoop();
         }
-        // TODO: variables are reset when game is replayed
-        // obstacleSpeed += 0.0001f;
     }
 
     private void SpawnLoop() {
@@ -28,6 +28,9 @@ public class Spawner : MonoBehaviour
 
         if (timeUntilObstacleSpawn >= obstacleSpawnTime) {
             Spawn();
+            if (obstacleSpeed < maxObstacleSpeed) {
+                obstacleSpeed += 0.2f;
+        }
             timeUntilObstacleSpawn = 0f;
         }
     }
@@ -36,6 +39,8 @@ public class Spawner : MonoBehaviour
         foreach(Transform child in obstacleParent) {
             Destroy(child.gameObject);
         }
+        // set obstacle speed back to default
+        obstacleSpeed = 6f;
     }
 
     private void Spawn() {
